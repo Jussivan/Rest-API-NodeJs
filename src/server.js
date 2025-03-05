@@ -4,6 +4,10 @@ import { projectRoutes } from "./routes/projectRoutes/projectRoutes.js";
 
 const app = fastify();
 
+app.get('/', (request, reply) => {
+    return reply.status(200).send({ message: 'Welcome to the API!' });
+});
+
 app.register(certificateRoutes, {
     prefix: 'certificates',
 });
