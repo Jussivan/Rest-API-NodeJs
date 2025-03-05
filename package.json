@@ -1,0 +1,28 @@
+{
+  "name": "my-site-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jussivan/my-site-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jussivan/my-site-backend/issues"
+  },
+  "homepage": "https://github.com/Jussivan/my-site-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "prisma": "^6.4.1"
+  }
+}
