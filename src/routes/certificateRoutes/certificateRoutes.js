@@ -19,7 +19,7 @@ export async function certificateRoutes(app) {
             });
             return reply.status(201).send('Certificado criado com sucesso!');
         } catch(err) {
-            return reply.status(409).error(err);
+            return reply.status(409).send(err);
         }
     });
 
@@ -31,7 +31,7 @@ export async function certificateRoutes(app) {
                 data: certificates
             });
         } catch(err) {
-            return reply.status(409).error(err);
+            return reply.status(409).send(err);
         }
     });
 
@@ -44,7 +44,7 @@ export async function certificateRoutes(app) {
                 data: certificate
             });
         } catch(err) {
-            return reply.status(409).console.error(err);
+            return reply.status(409).console.send(err);
         }
     });
 
@@ -67,7 +67,7 @@ export async function certificateRoutes(app) {
                 data: certificate
             });
         } catch(err) {
-            return reply.status(409).console.error(err);
+            return reply.status(409).console.send(err);
         }
     });
 
@@ -77,7 +77,7 @@ export async function certificateRoutes(app) {
             await prisma.certificate.delete({where: {id : id}});
             return reply.status(200).send('Certificado excluído com sucesso!');
         } catch(err) {
-            return reply.status(209).console.error(err);
+            return reply.status(209).console.send(err);
         }
     })
 }
